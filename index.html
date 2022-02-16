@@ -1,6 +1,165 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <H1>OFarnworth.net</H1>
-    </head>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Robot Juice</title>  
+  <link rel="icon" href="images/icon.png">
+  <link rel="stylesheet" href="styles/grid.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/poll.js"></script>
+</head>
+<body class="container">
+
+    <!-- Logo -->
+    <header id="header">
+      <div id="logo">
+        <div id="robotjuice">
+          <div id="robot">Robot</div>
+          <div id="juice">Juice</div>
+        </div>
+        <div id="tagline">fictitious cycle lubricants</div>
+      </div>
+    </header>
+
+    <!-- Nav Bar -->
+    <nav id="nav">
+      <a class="navButton current">Home</a>
+      <a class="navButton" href="products">Products</a>
+      <a class="navButton" href="">Protect</a>
+      <a class="navButton" href="">Stockists</a>
+      <a class="navButton" href="">Events</a>
+      <a class="navButton" href="">Reviews</a>
+    </nav>
+
+    <!-- Page Unique Content -->
+    <article id="article">
+      <img id="robotBanner" src="images/robotbanner.jpg" alt="Small toy robot riding a tricycle"/>
+      <h2 id="aboutHeading">Robot juice is the ultimate fictitious bicycle and motorcycle lubricant oils.</h2>
+      <div class="divider"></div>
+
+      <section id="homeProductBanner">
+          <a href="products" class="homeBannerItem">
+            <img src="images/bikechain-bikeoil.jpg" alt="Closeup of many links from a bike chain">
+            <h2>Bike Oil</h2>
+            <p>Stops and protects against rust, reduces friction on moving parts and is essential on any cycle.</p>
+          </a>
+          <a href="products" class="homeBannerItem">
+            <img src="images/cycleside-drylubrication.jpg" alt="A person riding a bicycle on a dry road">
+            <h2>Dry Lubricant</h2>
+            <p>Perfect chain lubricant for dry road riding. Resists water penetration and washes off easily.</p>
+          </a>
+          <a href="products" class="homeBannerItem">
+            <img src="images/frontcycle-wetlubrication.jpg" alt="A person riding a bicycle on a wet road">
+            <h2>Wet Lubricant</h2>
+            <p> A thick, heavy duty lube designed to stick to the chain in wet conditions. Ideal for extreme weather and long distance riding.</p>
+          </a>
+          <a href="products" class="homeBannerItem">
+            <img src="images/productreviews.jpg" alt="Multiple right hands belonging to different people writing on a series of pieces of paper.">
+            <h2>Product Reviews</h2>
+            <p>Read what the press and our customers say about our excellent products.</p>
+          </a>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="splitSection"> <!-- Section is invisible to the user, purely used for splitting the two children sections side-by-side. -->
+
+        <section id="news">
+          <h2>Latest News</h2>
+          <div class="newsItem">
+            <h3> News Item One!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar lobortis quam, eu efficitur lacus fringilla vel. Sed efficitur faucibus interdum. Curabitur volutpat non leo non molestie. In gravida massa eget lorem accumsan sagittis. Aenean efficitur turpis quis lorem viverra fringilla.</p>
+            <time class="date">2020-09</time>
+          </div>
+          <div class="newsItem">
+            <h3> News Item Two!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac lectus turpis. Fusce eu sapien enim. Proin feugiat ipsum tortor, id finibus lacus hendrerit sit amet. Fusce eu orci non elit accumsan blandit in vitae mauris.</p>
+            <time class="date">2020-09</time>
+          </div>
+          <div class="newsItem">
+            <h3> News Item Three!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus varius risus, quis fringilla erat consectetur ut. Sed justo purus, vulputate in purus vel, consectetur imperdiet ex. Proin fringilla porttitor velit ac pharetra. Proin non pulvinar velit. Nulla in metus fermentum, tempus nunc vitae, rutrum nisl.</p>
+            <time class="date">2020-09</time>
+          </div>
+        </section>
+
+        <section id="readerInteraction">
+          <h2>Reader Poll</h2>
+          <p>Are Robot Juice the best and most usable and accessible fake oils around?</p>
+          <div id="poll">            
+            <input type="radio" name="poll" id="pollyes"> <!-- Triggers JS -->
+            <label for="pollyes">Yes</label>
+            <input type="radio" name="poll" id="pollno"> <!-- Triggers JS -->
+            <label for="pollno">No</label>    
+          </div>
+          <div id="results">
+            <p>Thanks for voting!</p>
+            <div>
+              <div class="bar" id="baryes">Yes</div>
+              <label for="baryes">60%</label>
+            </div>
+            <div>
+              <div class="bar" id="barno">No</div>
+              <label for="barno">40%</label>
+            </div>
+          </div>
+          <h2 id="compHeading">Competition</h2>
+          <p>Win absolutely nothing by entering this extremely expensive competition. Robot Juice will not send you a full range of our cycling and motorcycle oils and lubricants as we do not exist. But just for fun...</p>
+          <p>Which Film is our address made up from?</p>
+          <p>a) Armageddon</p>
+          <p>b) Harry Potter</p>
+          <p>c) The Simpsons Movie</p>
+          <p>Send answers via postcard.</p>
+        </section>
+
+      </section>     
+
+    </article>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div id="upperFooter">
+        <div class="sideSpacer"></div>
+        <div id="cycleMagazine">
+          <img src="images/cyclemagazine.jpg" alt="Cover of an Issue of 'Cycling Active' Magazine"/>
+        </div>
+        <div id="magazineReview">
+          <h2>Latest Reviews</h2>
+          <p>Cycling magazine has given Robot Juice a 5 star rating in its latest reviews of dry lubricants. Robot Juice Dry lube was rated the highest out of over 40 top brand dry lubes.</p>
+        </div>
+        <div id="links">
+          <h2>Links</h2>
+          <ul> 
+              <li><a href="">Edge Hill University</a></li>
+              <li><a href="">Dave Walsh</a></li>
+              <li><a href="https://twitter.com/walsh_d">https://twitter.com/walsh_d</a></li>
+              <li><a href="">CIS1110 - Web Design and Development module</a></li>
+          </ul>
+        </div>
+        <div class="sideSpacer"></div>
+      </div>
+      <div id="lowerFooter">
+          <div class="sideSpacer"></div>
+          <div id="footerCenter">
+            <div class="footerHalf" id="leftFooterHalf">
+              <p>Robot Juice Fictitious Products Not Ltd., Unit 9¾, Privet Drive, Little Whingeing, Surrey DN18 5RP</p>
+              <p>Telephone: +44 (0)1695 657648. Email: walshd@edgehill.ac.uk</p>
+            </div>
+            <div class="footerHalf" id="rightFooterHalf">
+              <div>
+                <a href="">Contact Us</a> | 
+                <a href="">Privacy</a> | 
+                <a href="">Terms & Conditions</a> | 
+                <a href="">Accessibility</a>
+              </div>
+              <p>Copyright © 2018 Dave Walsh. Design by Oliver Farnworth</p>
+            </div>
+          </div>
+          <div class="sideSpacer"></div>
+      </div>
+    </footer>
+
+</body>
 </html>

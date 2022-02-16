@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Robot Juice</title>  
+  <link rel="icon" href="/images/icon.png">
+  <link rel="stylesheet" href="/styles/grid.css">
+  <link rel="stylesheet" href="/styles/styles.css">  
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  <script src="/js/reviews.js"></script>
+</head>
+<body class="container">
+
+    <!-- Logo -->
+    <header id="header">
+      <div id="logo">
+        <div id="robotjuice">
+          <div id="robot">Robot</div>
+          <div id="juice">Juice</div>
+        </div>
+        <div id="tagline">fictitious cycle lubricants</div>
+      </div>
+    </header>
+    
+    <!-- Nav Bar -->
+    <nav id="nav">
+      <a class="navButton" href="/index.html">Home</a>
+      <a class="navButton current" href="">Products</a>
+      <a class="navButton" href="">Protect</a>
+      <a class="navButton" href="">Stockists</a>
+      <a class="navButton" href="">Events</a>
+      <a class="navButton" href="">Reviews</a>
+    </nav>
+
+    <!-- Page Unique Content -->
+    <article id="article">
+        <section id="store">
+          <div id="thumbnails">
+            <img src ="/images/prod-thumb1.jpg" alt="Thumbnail of Robot Juice Oil in the foreground and a bicycle in the background">
+            <img src ="/images/prod-thumb2.jpg" alt="Thumbnail of a closeup of many links from a bike chain">
+            <img src ="/images/prod-thumb3.jpg" alt="Thumbnail of a pool of oil on the ground">
+          </div>
+          <div id="productImage"><img src="/images/robotjuicebikeoil.jpg" alt="Robot Juice Oil in the foreground and a bicycle in the background"></div>
+          <form id="purchase">
+            <h2>Bike Oil</h2>
+            <h3 id="price">£99.99</h3>
+            <div id="dropdowns">
+              <select id="sizeDropdown" required>
+                <option value="" selected>Size</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+              </select>
+              <select id="quantityDropdown" required>
+                  <option value="" selected>Qty</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <button type="submit">BUY NOW</button>
+            <a id="stockist" href=""><h3>FIND NEAREST STOCKIST</h3></a>
+            <div id="share">
+              <h3>SHARE</h3>
+              <a href=""><img src="/images/facebook.jpg" alt="The Facebook Share Icon"></a>
+              <a href=""><img src="/images/twitter.jpg" alt="The Twitter Share Icon"></a>
+              <a href=""><img src="/images/email.jpg" alt="The E-Mail Share Icon"></a>
+            </div>
+            <p>Robot Juice bike oil for bicycles stops rust and other corrosion from starting. Applied to already corroding metals it breaks down the corrosion and starts to prevent it from building up again, protecting from the point of contact.</p>
+          </form>
+        </section>
+        <div class="divider"></div>
+        <section id="similarProducts">
+          <h2>Similar Products</h2>
+          <div id="similarProductBanner">
+            <a href=""><img src="/images/simprod.jpg" alt="Product Image 1"></a>
+            <a href=""><img src="/images/simprod.jpg" alt="Product Image 2"></a>
+            <a href=""><img src="/images/simprod.jpg" alt="Product Image 3"></a>
+            <a href=""><img src="/images/simprod.jpg" alt="Product Image 4"></a>
+            <a href=""><img src="/images/simprod.jpg" alt="Product Image 5"></a>
+            <a href=""><img src="/images/simprod.jpg" alt="Product Image 6"></a>
+          </div>
+        </section>
+        <div class="divider"></div>
+        <section id="reviews">
+          <div id="title">
+            <h2>Product Reviews</h2>    
+            <h2 id="exampleStars">* * * * *</h2>        
+          </div>
+          <div class="reviewDivider"></div>
+          <ul>
+
+            <!-- Reviews are added here as list items by JS. -->
+
+            <!--
+            Example Review List Item:
+
+            <li>
+              <div class="reviewContent">
+                <div class="pfp">
+                  <img src="images/reviewicon1.jpg">
+                </div>
+                <div class="reviewInfo">
+                  <h3 class="username">Oliver</h3>
+                  <div class="rating">
+                    <h2 class="star red">*</h2>
+                    <h2 class="star red">*</h2>
+                    <h2 class="star red">*</h2>
+                    <h2 class="star black">*</h2>
+                    <h2 class="star black">*</h2>
+                  </div>
+                  <h3 class="summary">Great Greace!!</h3>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget suscipit mauris.</p>
+              </div>
+              <div class="reviewDivider"></div>
+            </li>
+            -->
+
+          </ul>
+          <button id="showAllReviews">READ ALL REVIEWS</button> <!-- Triggers JS -->
+        </section>
+    </article>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div id="upperFooter">
+        <div class="sideSpacer"></div>
+        <div id="cycleMagazine">
+          <img src="/images/cyclemagazine.jpg" alt="Cover of an Issue of 'Cycling Active' Magazine"/>
+        </div>
+        <div id="magazineReview">
+          <h2>Latest Reviews</h2>
+          <p>Cycling magazine has given Robot Juice a 5 star rating in its latest reviews of dry lubricants. Robot Juice Dry lube was rated the highest out of over 40 top brand dry lubes.</p>
+        </div>
+        <div id="links">
+          <h2>Links</h2>
+          <ul> 
+              <li><a href="">Edge Hill University</a></li>
+              <li><a href="">Dave Walsh</a></li>
+              <li><a href="https://twitter.com/walsh_d">https://twitter.com/walsh_d</a></li>
+              <li><a href="">CIS1110 - Web Design and Development module</a></li>
+          </ul>
+        </div>
+        <div class="sideSpacer"></div>
+      </div>
+      <div id="lowerFooter">
+          <div class="sideSpacer"></div>
+          <div id="footerCenter">
+            <div class="footerHalf" id="leftFooterHalf">
+              <p>Robot Juice Fictitious Products Not Ltd., Unit 9¾, Privet Drive, Little Whingeing, Surrey DN18 5RP</p>
+              <p>Telephone: +44 (0)1695 657648. Email: walshd@edgehill.ac.uk</p>
+            </div>
+            <div class="footerHalf" id="rightFooterHalf">
+              <div>
+                <a href="">Contact Us</a> | 
+                <a href="">Privacy</a> | 
+                <a href="">Terms & Conditions</a> | 
+                <a href="">Accessibility</a>
+              </div>
+              <p>Copyright © 2018 Dave Walsh. Design by Oliver Farnworth</p>
+            </div>
+          </div>
+          <div class="sideSpacer"></div>
+      </div>
+    </footer>
+</body>
+</html>
