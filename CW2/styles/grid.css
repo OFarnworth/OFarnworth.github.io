@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eeeeee;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5.5fr 1fr;
+    grid-template-rows: min-content min-content 1fr min-content; /* The only dynamic row should be the unique content of the page in the article. */
+    height: 100vh; /* Ensures a sticky footer - The height of the web page is always at least as tall as the viewport. */
+    margin: 0;
+    grid-template-areas:
+        ".      header      ."
+        ".      nav         ."
+        ".      article     ."
+        "footer footer      footer";
+}
+
+/* Logo */
+
+#header {
+    grid-area: header;
+}
+
+#logo {
+    padding-top: 15px;    
+    width: max(26vw, 260px);
+}
+
+#robotjuice {
+    display: flex;
+    flex-direction: row;    
+    height: max(8vw, 80px);
+    font-size: max(6vw, 60px);
+}
+
+#robot {
+    margin-right: 1vw;
+    font-family: 'Damion', cursive;
+    font-size: inherit;
+    color: #c5110b;
+}
+
+#juice {
+    font-family: 'Damion', cursive;
+    font-size: inherit;
+    color: #000000;
+}
+
+#tagline {
+    float: right;
+    position: relative;    
+    bottom: 3ex;
+    font-size: max(1.1vw,11px);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+/* Nav Bar */
+
+#nav {
+    grid-area: nav;
+    display: flex;
+    border-top: solid 1px lightgrey;
+    border-bottom: solid 1px lightgrey;
+}
+
+.navButton {
+    flex: 1;    
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+
+.navButton.current {
+    background-color: #C5110B;
+    color: white;
+}
+
+nav>a:hover {
+    background-color: #C5110B;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.navButton+.navButton { /* Creates the short lines between neighbouring nav buttons. */
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, transparent 20%, lightgrey 20%, lightgrey 70%, transparent 70%) 0 100%;
+}
+
+/*  Page Content */
+
+#article {
+    grid-area: article;
+}
+
+/*  Page Footer */
+
+#footer {
+    grid-area: footer;
+    border-top: solid 2px grey;
+}
+
+#upperFooter {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    color: #C5110B;  
+}
+
+#cycleMagazine {
+    flex: 18.75;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#cycleMagazine img{
+    width: 200px;
+    margin-right: 50px; 
+}
+
+#magazineReview {
+    flex: 37.5;
+    margin-top: 40px;
+}
+
+#magazineReview h2{
+    margin-top: 0;
+    color: inherit;
+    font-size: 250%;
+}
+
+#magazineReview p{
+    max-width: 400px;
+    color: inherit;
+    font-size: 120%;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+#links {
+    flex: 18.75;
+    flex-basis: 250px;
+    margin-top: 40px;
+}
+
+#links ul {
+    padding-inline-start: 0;
+}
+
+#links h2{
+    margin-top: 0;
+    color: inherit;
+    font-size: 250%;
+}
+
+#links li {
+    list-style-type: none;
+    font-size: 120%;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+#links li a {
+    text-decoration:  underline;
+    color: inherit;
+}
+
+#links li a:hover {
+    font-size: 105%;
+    transition-duration: 0.25s;
+}
+
+#lowerFooter {    
+    height: 250px;
+    display: flex;
+    background: #C5110B;
+    border-top: solid 2px grey;
+}
+
+#footerCenter {
+    flex: 73.33;
+    display: flex;
+}
+
+.footerHalf p,.footerHalf a {
+    font-size: 103%;
+    font-weight: normal;
+}
+
+#rightFooterHalf div {
+    margin: 1.12em 0;
+}
+
+#rightFooterHalf div a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+#rightFooterHalf div a:hover{    
+    color: white;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+}
+
+#leftFooterHalf {
+    flex: 60%
+}
+
+#rightFooterHalf {
+    flex: 40%;
+    text-align: right;
+}
+
+.sideSpacer { /* Artificially adds margins to seperate the footer content from the edge of the page and close to line it up with the content in the rest of the page. */
+    flex: 13.33;
+}
+
+/*  Mobile viewport adjustments */
+
+@media all and (max-width: 900px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .container { /* Redefines the page grid as a single column. */
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "footer";
+        grid-template-rows: min-content;        
+        grid-template-columns: 1fr;
+    }
+
+    #logo { /* Centres the Logo at the top of the page. */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sideSpacer { /* Removes the gutters from the footer. */
+        flex: 0;
+    }
+
+    #upperFooter { /* Centres the text in the footer. */
+        text-align: center;
+    }
+
+    #cycleMagazine { /* Prevents the magazine image from taking up too much space. */
+        flex-basis: 250px;        
+    }
+
+    #cycleMagazine img{ /* Centres the magazine image. */
+        display: block;
+        margin: auto;
+        align-self: center
+    }
+
+    #magazineReview { /* Centres the magazine review. */
+        flex-basis: 250px; 
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #magazineReview p{ /* Centres the text in the magazine review. */
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #footerCenter {
+        flex-wrap: wrap;
+    }
+
+    #leftFooterHalf { /* Centres the contact info in the lower footer and makes it take up the full width of the page, pushing the right half underneith. */
+        flex: 100%;
+        text-align: center;
+    }
+
+    #rightFooterHalf { /* Centres the links in the lower footer, similar to above. */
+        flex: 100%;
+        text-align: center;
+    }
+
+    #upperFooter { /* Adds some artificial padding to seperate the content from the edge of the viewport, since the page gutters have been removed. */
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
