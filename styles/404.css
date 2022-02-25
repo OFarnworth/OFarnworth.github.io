@@ -6,10 +6,16 @@ body:before {
     width: 100vw;
     position: absolute;
     background-image: url("/images/qhMbkGi.gif");
-    background-size: contain;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: right bottom;
     opacity: 20%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    body:before {
+        background-position: center;
+    }
 }
 
 body{
